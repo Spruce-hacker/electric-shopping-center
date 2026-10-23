@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Log in | Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body data-page="login">
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="cart.html" data-i18n="nav_cart">Cart</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section>
+            <div class="panel narrow">
+                <h2 data-i18n="login_title">Log in</h2>
+                <form id="login-form" novalidate>
+                    <label for="login-email" data-i18n="label_email">Email</label>
+                    <input id="login-email" type="email" autocomplete="email" required>
+                    <label for="login-password" data-i18n="label_password">Password</label>
+                    <input id="login-password" type="password" autocomplete="current-password" required>
+                    <p class="form-message" id="login-message" role="alert"></p>
+                    <button type="submit" data-i18n="btn_login">Log in</button>
+                </form>
+                <p class="switch"><span data-i18n="no_account">Don't have an account?</span> <a href="register.html" data-i18n="link_register">Create an account</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="wrap">© 2026 Muba Electrical Centre</footer>
+
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

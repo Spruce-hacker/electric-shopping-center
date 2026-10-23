@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your account | Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body data-page="account">
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="cart.html" data-i18n="nav_cart">Cart</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section id="logged-in" hidden>
+            <h1 data-i18n="account_title">Your account</h1>
+            <p><span data-i18n="welcome">Welcome</span>, <strong id="user-name"></strong></p>
+            <p id="user-email" class="hint"></p>
+            <button type="button" id="logout-button" data-i18n="btn_logout">Log out</button>
+        </section>
+    </main>
+
+    <footer class="wrap">© 2026 Muba Electrical Centre</footer>
+
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

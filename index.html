@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="#aisles" data-i18n="nav_shop">Shop</a>
+            <a href="#visit" data-i18n="nav_contact">Contact</a>
+            <a href="cart.html"><span data-i18n="nav_cart">Cart</span> (<span id="cart-count">0</span>)</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <h1 data-i18n="hero_title">Everything electrical, under one roof.</h1>
+            <p data-i18n="hero_text">Cables, switches, solar, lighting and tools. Genuine stock, delivered to you or ready for pickup.</p>
+            <a class="btn" href="#aisles" data-i18n="browse_aisles">Browse aisles</a>
+        </section>
+
+        <section id="aisles">
+            <h2 data-i18n="aisles_title">Shop by aisle</h2>
+            <div class="aisles">
+                <div class="aisle brown"><h3 data-i18n="aisle_cables">Cables and wires</h3><p data-i18n="aisle_cables_text">House wiring, armored cable, extension reels.</p></div>
+                <div class="aisle blue"><h3 data-i18n="aisle_switches">Switches and sockets</h3><p data-i18n="aisle_switches_text">Plates, plugs, adaptors, dimmers.</p></div>
+                <div class="aisle green"><h3 data-i18n="aisle_solar">Solar and batteries</h3><p data-i18n="aisle_solar_text">Panels, inverters, charge controllers.</p></div>
+                <div class="aisle yellow"><h3 data-i18n="aisle_lighting">Lighting</h3><p data-i18n="aisle_lighting_text">LED bulbs, tubes, floodlights.</p></div>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2 data-i18n="featured_title">Featured products</h2>
+            <div class="products" id="product-list"></div>
+        </section>
+
+        <section id="visit">
+            <h2 data-i18n="visit_title">Visit or contact us</h2>
+            <p>Your street address, Kikunde Kilindi-TANGA<br><span data-i18n="hours">Monday to Saturday, 8:00 to 18:00</span><br>+255 786 167 771</p>
+        </section>
+    </main>
+
+    <footer class="wrap">© 2026 Muba Electrical Centre</footer>
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

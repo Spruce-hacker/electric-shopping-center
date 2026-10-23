@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Cart | Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_continue">Continue shopping</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section>
+            <h1 data-i18n="cart_title">Your cart</h1>
+            <div class="cart-list" id="cart-list"></div>
+            <div class="cart-total" id="cart-total"></div>
+            <a class="btn checkout-link" id="checkout-link" href="checkout.html" data-i18n="checkout_button" hidden>Proceed to checkout</a>
+        </section>
+    </main>
+
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>

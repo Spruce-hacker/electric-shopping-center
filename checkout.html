@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout | Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body data-page="checkout">
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="cart.html" data-i18n="nav_cart">Cart</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <h1 data-i18n="checkout_title">Checkout</h1>
+
+        <section id="checkout-empty" hidden>
+            <p class="empty-cart"><span data-i18n="err_cart_empty">Your cart is empty.</span> <a href="index.html#products" data-i18n="browse_products">Browse products</a></p>
+        </section>
+
+        <section id="checkout-main" hidden>
+            <div class="account-grid">
+                <div class="panel">
+                    <h2 data-i18n="fulfilment_title">How do you want to receive your order?</h2>
+                    <form id="checkout-form" novalidate>
+                        <div class="choice">
+                            <label><input type="radio" name="fulfilment" value="pickup" checked> <span data-i18n="pickup">Pick up at the shop</span></label>
+                            <label><input type="radio" name="fulfilment" value="delivery"> <span data-i18n="delivery">Delivery</span></label>
+                        </div>
+
+                        <label for="phone" data-i18n="label_phone">Phone number</label>
+                        <input id="phone" type="tel" autocomplete="tel" maxlength="20" required>
+                        <p class="hint" data-i18n="phone_hint">We will call you about your order.</p>
+
+                        <fieldset id="delivery-fields" hidden>
+                            <legend data-i18n="delivery_title">Delivery location</legend>
+                            <label for="country" data-i18n="label_country">Country</label>
+                            <input id="country" type="text" value="Tanzania" readonly>
+                            <label for="region" data-i18n="label_region">Region</label>
+                            <select id="region"></select>
+                            <label for="district-select" data-i18n="label_district">District</label>
+                            <select id="district-select" hidden></select>
+                            <input id="district-input" type="text" maxlength="100" autocomplete="off" hidden>
+                            <label for="ward-select" data-i18n="label_ward">Ward</label>
+                            <select id="ward-select" hidden></select>
+                            <input id="ward-input" type="text" maxlength="100" autocomplete="off" hidden>
+                            <label for="landmark" data-i18n="label_landmark">Street or landmark (optional)</label>
+                            <input id="landmark" type="text" maxlength="200" autocomplete="off">
+                        </fieldset>
+
+                        <p class="form-message" id="checkout-message" role="alert"></p>
+                        <button type="submit" id="place-order" data-i18n="btn_place_order">Place order</button>
+                    </form>
+                </div>
+
+                <div class="panel">
+                    <h2 data-i18n="summary_title">Order summary</h2>
+                    <div id="summary"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="wrap">© 2026 Muba Electrical Centre</footer>
+
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order | Muba Electrical Centre</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body data-page="order">
+    <header class="wrap top">
+        <a class="logo" href="index.html">Muba</a>
+        <nav>
+            <a href="index.html" data-i18n="nav_home">Home</a>
+            <a href="cart.html" data-i18n="nav_cart">Cart</a>
+            <a href="account.html" id="account-link">Log in</a>
+            <button type="button" id="theme-toggle" class="control">Dark mode</button>
+            <select id="lang-select" class="control" aria-label="Language">
+                <option value="en">English</option>
+                <option value="sw">Kiswahili</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="wrap">
+        <section id="order-missing" hidden>
+            <p class="empty-cart"><span data-i18n="order_not_found">Order not found.</span> <a href="index.html" data-i18n="nav_continue">Continue shopping</a></p>
+        </section>
+
+        <section id="order-main" hidden>
+            <h1 data-i18n="order_received">Order received</h1>
+            <p id="order-note"></p>
+
+            <div class="panel">
+                <dl class="detail-list" id="order-details"></dl>
+                <h2 data-i18n="order_items_title">Items ordered</h2>
+                <div id="order-lines"></div>
+                <div id="order-totals"></div>
+            </div>
+
+            <p><a class="btn" href="index.html" data-i18n="nav_continue">Continue shopping</a></p>
+        </section>
+    </main>
+
+    <footer class="wrap">© 2026 Muba Electrical Centre</footer>
+
+    <script src="settings.js"></script>
+    <script src="account.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
